@@ -68,6 +68,7 @@ a {
         &.admin {
 
             .container {
+                
                 padding: $gap-0;
 
                 .admin_panel {
@@ -131,6 +132,40 @@ a {
                         width: $width-8-10;
                     
                     }
+
+                    .container {
+                        @extend %flex-vertical;
+                        @extend %box-radius-button;
+                        gap: $gap-2;
+
+                        .com_vars {
+                            @extend %box-model;
+                            @extend %box-flex;
+                            @extend %flex-vertical;
+                            @extend %box-radius-button;
+                            
+                            padding: $gap-2;
+                            gap: $gap-2;
+                            background: $grey-1;
+
+                            label {
+                                font-family: $font;
+                                font-size: $font-size-7;
+                                font-weight: $font-weight-6;
+                                color: $grey-4;
+                            }
+                            input,
+                            textarea {
+                                @extend %box-radius-button;
+                                @extend %border-input;
+                                padding: $gap-1 $gap-2;
+                            }
+
+    
+                        }                        
+
+                    }
+
                 }
             }
         }
@@ -153,11 +188,47 @@ a {
     }
 
     .container {
-
         @extend %box-model;
         @extend %box-flex;
 
         width: $width-1-1;
     }
 
+}
+
+.header-huge {
+    font-size: $font-size-0;
+    line-height: $font-line-0;
+}
+h1 {
+    font-size: $font-size-1;
+    line-height: $font-line-1;
+}
+h2 {
+    font-size: $font-size-2;
+    line-height: $font-line-2;
+}
+h3 {
+    font-size: $font-size-3;
+    line-height: $font-line-3;
+}
+h4 {
+    font-size: $font-size-4;
+    line-height: $font-line-4;
+}
+h5 {
+    font-size: $font-size-5;
+    line-height: $font-line-5;
+}
+h6 {
+    font-size: $font-size-6;
+    line-height: $font-line-6;
+    color: $grey-4;
+}
+
+#{$header-group} {
+    @extend %box-model;
+    @extend %box-flex;
+    width: $width-1-1;
+    margin: $gap-0;
 }
