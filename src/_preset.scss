@@ -35,6 +35,14 @@
     flex-direction: row;
 }
 
+%flex-align-vert {
+    align-items: center;
+}
+
+%flex-justify-between {
+    justify-content: space-between;
+}
+
 // Element visibility
 
 %visible {
@@ -60,43 +68,31 @@
 }
 
 %radius-button {
-    -webkit-border-radius: $gap-6; 
-    -moz-border-radius: $gap-6; 
-    border-radius: $gap-6; 
-}
-
-// Borders
-
-%border-solid {
-    border-style: solid;
-    border-width: 1px;
-}
-
-%border-dashed {
-    border-style: dashed;
-    border-width: 1px;
-}
-
-%border-dotted {
-    border-style: dotted;
-    border-width: 1px;
-}
-
-%border-double {
-    border-style: double;
-    border-width: 1px;
+    -webkit-border-radius: $gap-2; 
+    -moz-border-radius: $gap-2; 
+    border-radius: $gap-2; 
 }
 
 // Custom Font Transformation
 
 %uppercase {
-    text-transform: $upper;
+    text-transform: $font-upper;
 }
 
 %lower {
-    text-transform: $lower;
+    text-transform: $font-lower;
 }
 
 %capital {
-    text-transform: $capital;
+    text-transform: $font-capital;
+}
+
+// Cursor
+
+%cursor-default {
+    cursor: url(./assets/images/cursor.svg), default !important;
+}
+
+%cursor-hover {
+    cursor: url(./assets/images/cursor-hover.svg), e-resize !important;
 }

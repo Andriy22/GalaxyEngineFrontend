@@ -29,7 +29,7 @@
     }
     
     @else if $breakpoint == widescreen {
-        @media (min-width: $gap-23) {
+        @media (min-width: $gap-22) {
             @content;
         }
     }
@@ -48,3 +48,21 @@
 	background-image: -webkit-linear-gradient(unquote(nth($directions, 1)), $from, $to);
 	background-image:         linear-gradient(unquote($direction), $from, $to);
 }  
+
+
+// Borders
+// $style: solid, dashed, dotted, double, dot-dash, inset, groove, outset, wave, dot-dot-dash
+// $width: px, em
+
+@mixin custom-border($border, $color, $width, $style) {
+
+    border-#{$border}: $color $width $style;
+
+}
+@mixin default-border($color, $width, $style) {
+
+    border: $color $width $style;
+
+}
+
+

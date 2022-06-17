@@ -9,10 +9,10 @@ $grey-2: #eceef0;
 $grey-3: #dee1e5;
 $grey-4: #98a0ae;
 $grey-5: #626d7d;
-$primary: #0060ff;
-$primary-highlight: #66a0ff;
+$primary: #4b33ff; 
+$primary-highlight: #0060ff; //#66a0ff;
 $primary-shadow: #001d4d;
-$accent: #00d7f3;
+$accent: #be00cc;
 $accent-highlight: #80f0ff;
 
 // Element & Block gap, also can be used as icon sizes, media query screen size, etc
@@ -90,13 +90,3 @@ $font-capital: capitalize;
 
 // H1-h6
 $header-group: 'h1, h2, h3, h4, h5, h6';
-
-/*
-%cursor-default {
-    cursor: url(./assets/images/cursor.svg), default !important;
-}
-
-%cursor-hover {
-    cursor: url(./assets/images/cursor-hover.svg), e-resize !important;
-}
-*/

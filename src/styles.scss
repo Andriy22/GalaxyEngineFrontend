@@ -1,4 +1,7 @@
-/* Global styles, to run server: ng serve -o */
+/* Global styles,
+to run server: ng serve -o
+to create new component: ng g c <name>
+*/
 
 @import './vars',
         './preset',
@@ -17,6 +20,11 @@ body {
     @extend %flex-model;
     outline: none;
     text-decoration: none;
+}
+
+a,
+a:visited {
+    color: inherit;
 }
 
 #{$header-group} {
@@ -58,45 +66,229 @@ h1 {
     &.split-screen {
         padding: $gap-0;
     }
-    &.default,
+
     &.full-screen {
         @include breakpoints(mobile) {
-            padding: $gap-2 $gap-1;
         }
         @include breakpoints(tablet) {
-            padding: $gap-4 $gap-2;
         }
         @include breakpoints(notebook) {
-            padding: $gap-6 $gap-3;
         }
         @include breakpoints(laptop) {
-            padding: $gap-8 $gap-4;
         }
         @include breakpoints(widescreen) {
-            padding: $gap-10 $gap-5;
+            width: $size-view-w;
+            height: $size-view-h;
         }
     }
-    &.advanced {
-        @include breakpoints(mobile) {
-            padding: $gap-4 $gap-2;
-        }
-        @include breakpoints(tablet) {
-            padding: $gap-6 $gap-3;
-        }
-        @include breakpoints(notebook) {
-            padding: $gap-8 $gap-4;
-        }
-        @include breakpoints(laptop) {
-            padding: $gap-10 $gap-5;
-        }
-        @include breakpoints(widescreen) {
-            padding: $gap-12 $gap-6;
-        }        
-    }
+
+    // &.advanced {
+    //     @include breakpoints(mobile) {
+    //         padding: $gap-2 $gap-4;
+    //     }
+    //     @include breakpoints(tablet) {
+    //         padding: $gap-3 $gap-6;
+    //     }
+    //     @include breakpoints(notebook) {
+    //         padding: $gap-4 $gap-8;
+    //     }
+    //     @include breakpoints(laptop) {
+    //         padding: $gap-5 $gap-10;
+    //     }
+    //     @include breakpoints(widescreen) {
+    //         padding: $gap-6 $gap-12;
+    //     }        
+    // }
 
     .com-container {
         @extend %flex;
         @extend %flex-model;
 
+        // Admin Panel Component
+        &.com-admin {
+
+            @extend %flex-horizontal;
+            width: $size-1-1;
+
+            @include breakpoints(mobile) {
+            }
+            @include breakpoints(tablet) {
+            }
+            @include breakpoints(notebook) {
+            }
+            @include breakpoints(laptop) {
+            }
+            @include breakpoints(widescreen) {
+                @extend %flex-horizontal;
+            } 
+
+            .com-admin-sidebar {
+                @extend %flex;
+                @extend %flex-model;
+                background: $grey-1;               
+
+                @include breakpoints(mobile) {
+                }
+                @include breakpoints(tablet) {
+                }
+                @include breakpoints(notebook) {
+                }
+                @include breakpoints(laptop) {
+                }
+                @include breakpoints(widescreen) {
+                    width: $gap-16;
+                    flex-direction: column;
+                    gap: $gap-0;        
+                }
+                
+                .logged_user {
+                    @extend %flex;
+                    @extend %flex-model;
+                    @extend %flex-justify-between;
+                    color:$white;
+                    background: $black;
+                    padding: $gap-6 $gap-3;
+                }
+                .menu-item-title {
+                    @extend %flex;
+                    @extend %flex-model;
+                    @extend %flex-justify-between;
+                    @extend %uppercase;
+                    color: $grey-4;
+
+                }
+                .menu-item {
+                    @extend %flex;
+                    @extend %flex-model;
+                    @extend %flex-justify-between;                    
+                    color: $grey-5;
+                }
+
+                .menu-item-title,
+                .menu-item {
+                    padding: $gap-6 $gap-3;
+
+                    &.current {
+                        background: $grey-3;
+                    }
+                }
+
+            }
+
+            .com-admin-content {
+                @extend %flex;
+                @extend %flex-model;
+                background: $white;
+
+                @include breakpoints(mobile) {
+                }
+                @include breakpoints(tablet) {
+                }
+                @include breakpoints(notebook) {
+                }
+                @include breakpoints(laptop) {
+                }
+                @include breakpoints(widescreen) {
+                    flex-direction: column;
+                    padding: $gap-6 $gap-12;
+                    width: $size-1-1;
+                    gap: $gap-6;
+                }
+
+                .edit-component {
+                    @extend %flex;
+                    @extend %flex-model;
+                    @extend %flex-horizontal;
+                    @extend %radius-button;
+                    align-items: center;
+                    align-self: stretch;
+                    justify-content: space-between;
+                    background: $grey-1;
+
+                    @include breakpoints(mobile) {
+                    }
+                    @include breakpoints(tablet) {
+                    }
+                    @include breakpoints(notebook) {
+                    }
+                    @include breakpoints(laptop) {
+                    }
+                    @include breakpoints(widescreen) {
+                        width: $size-1-1;
+                        padding: $gap-4;
+                        gap: $gap-6;
+                    }                    
+                }
+            }
+        }
+        
+
+       
+
+    }
+}
+
+hr,
+.separator {
+    @extend %flex;
+    @extend %flex-model;
+    @include custom-border('bottom', $grey-3, 0.0625em, solid);
+    height: $gap-0;
+    width: $size-1-1;
+    margin: $gap-2 $gap-0;
+}
+
+input[type="button"],
+.button {
+    @extend %flex;
+    @extend %flex-model;
+    @extend %flex-horizontal;
+    @extend %radius-button;
+
+    font-family: $font;
+    font-weight: $font-weight-4;
+    border: none;
+    
+    &.button-primary {
+        font-size: $gap-4;
+        background: $primary;
+        color: $white;
+    }
+    &.button-default {
+        padding: $gap-2 $gap-4;
+    }
+    &.button-large {
+        font-size: $gap-6;
+        padding: $gap-3 $gap-4;
+    }
+    &.text-center {
+        text-align: center;
+    }
+    &.text-left {
+        text-align: left;
+    }
+    &.text-right {
+        text-align: right;
+    }
+    &.w-icon {
+        gap: $gap-3;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        background: $primary-highlight;
+        cursor: pointer;
+    }
+
+    @include breakpoints(mobile) {
+    }
+    @include breakpoints(tablet) {
+    }
+    @include breakpoints(notebook) {
+    }
+    @include breakpoints(laptop) {
+    }
+    @include breakpoints(widescreen) {
     }
 }
