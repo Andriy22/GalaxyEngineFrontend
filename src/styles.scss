@@ -1,234 +1,102 @@
 /* Global styles, to run server: ng serve -o */
 
-@import 'vars';
-@import 'mixins';
+@import 'vars',
+        'preset',
+        'mixins';
 
 html,
 body {
-    font-family: $font;
-    font-size: 16px;
     @extend %reset;
-    // width: 100vw;
-    // height: 100vh;    
+    font-size: $base;
+    font-family: $font;
 }
 
 *,
 *::before,
 *::after {
-    @extend %box-model;
+    @extend %flex-model;
     outline: none;
     text-decoration: none;
 }
 
-a {
-    &:visited,
-    &:link {
-        color: inherit;
+#{$header-group} {
+    @extend %flex;
+    @extend %flex-model;
+    width: $size-1-1;
+    margin: $gap-0;
+
+    &.color-default {
+        color: $primary;
     }
-    &:hover,
-    &:active,
-    &:focus {
+    &.color-inactive {
+        color: $grey-4;
+    }
+    &.color-accent {
         color: $accent;
     }
+    &.thin { font-weight: $font-weight-1; }
+    &.extra-light { font-weight: $font-weight-2; }
+    &.light { font-weight: $font-weight-3; }
+    &.normal { font-weight: $font-weight-4; }
+    &.medium { font-weight: $font-weight-5; }
+    &.semi-bold { font-weight: $font-weight-6; }
+    &.bold { font-weight: $font-weight-7; }
+    &.extra-bold { font-weight: $font-weight-8; }
+    &.black { font-weight: $font-weight-9; }
 }
 
-
-/* Main block structure transformation */
-.full-screen {
-    width: 100vw;
-    height: 100vh;
-}
-
-.wrapper {
-    @extend %box-model;
-    @extend %box-flex;
-    width: $width-1-1;
-
-    &.split_screen {
-        padding: $gap-0;
-
-        &.split_half {
-            .container {
-                width: $width-5-10;
-            }
-        }
-
-        &.sign_in {
-
-            &:first-child {
-            // styles for artwork
-            color: green;
-            }
-            &:last-child {
-            // styles for all form elements
-            color: red;
-            }
-        }
-
-        &.admin {
-
-            .container {
-                
-                padding: $gap-0;
-
-                .admin_panel {
-
-                    padding: $gap-0;
-
-                    @include breakpoints(mobile) {
-                    }
-                    @include breakpoints(tablet) {
-                    }
-                    @include breakpoints(notebook) {
-                    }
-                    @include breakpoints(laptop) {
-                    }
-                    @include breakpoints(widescreen) {
-                        width: $width-2-10;
-                    }
-
-                    .container {
-                        @extend %flex-vertical;
-                        padding: $gap-0;
-
-                        .menu-item {
-                            padding: $gap-1 $gap-2;
-
-                            &.user {
-                                background: $black;
-                                color: $grey-2;
-                            }
-                            &.group-title {
-                                @extend %uppercase;
-                                color: $grey-4;
-                            }
-                            &.group-item {
-                                font-weight: $font-weight-4;
-                                color: $grey-5;
-
-                                &:hover,
-                                &:hover * {
-                                    color: $accent;
-                                    background: $grey-1;
-                                    cursor: pointer;
-                                }
-                            }
-                        }                        
-                    }
-
-                }
-                .admin_content {
-                    padding: $gap-2;
-
-                    @include breakpoints(mobile) {
-                    }
-                    @include breakpoints(tablet) {
-                    }
-                    @include breakpoints(notebook) {
-                    }
-                    @include breakpoints(laptop) {
-                    }
-                    @include breakpoints(widescreen) {
-                        width: $width-8-10;
-                    
-                    }
-
-                    .container {
-                        @extend %flex-vertical;
-                        @extend %box-radius-button;
-                        gap: $gap-2;
-
-                        .com_vars {
-                            @extend %box-model;
-                            @extend %box-flex;
-                            @extend %flex-vertical;
-                            @extend %box-radius-button;
-                            
-                            padding: $gap-2;
-                            gap: $gap-2;
-                            background: $grey-1;
-
-                            label {
-                                font-family: $font;
-                                font-size: $font-size-7;
-                                font-weight: $font-weight-6;
-                                color: $grey-4;
-                            }
-                            input,
-                            textarea {
-                                @extend %box-radius-button;
-                                @extend %border-input;
-                                padding: $gap-1 $gap-2;
-                            }
-
-    
-                        }                        
-
-                    }
-
-                }
-            }
-        }
-    }
-
-    @include breakpoints(mobile) {
-        padding: $box-gap-mobile;
-    }
-    @include breakpoints(tablet) {
-        padding: $box-gap-tablet;
-    }
-    @include breakpoints(notebook) {
-        padding: $box-gap-notebook;
-    }
-    @include breakpoints(laptop) {
-        padding: $box-gap-laptop;
-    }
-    @include breakpoints(widescreen) {
-        padding: $box-gap-widescreen;
-    }
-
-    .container {
-        @extend %box-model;
-        @extend %box-flex;
-
-        width: $width-1-1;
-    }
-
-}
-
-.header-huge {
-    font-size: $font-size-0;
-    line-height: $font-line-0;
-}
 h1 {
-    font-size: $font-size-1;
-    line-height: $font-line-1;
-}
-h2 {
-    font-size: $font-size-2;
-    line-height: $font-line-2;
-}
-h3 {
-    font-size: $font-size-3;
-    line-height: $font-line-3;
-}
-h4 {
-    font-size: $font-size-4;
-    line-height: $font-line-4;
-}
-h5 {
-    font-size: $font-size-5;
-    line-height: $font-line-5;
-}
-h6 {
-    font-size: $font-size-6;
-    line-height: $font-line-6;
-    color: $grey-4;
+    font-size: $gap-12;
+    line-height: $gap-12 + $gap-2;
+    letter-spacing: $gap-1 / 10;
 }
 
-#{$header-group} {
-    @extend %box-model;
-    @extend %box-flex;
-    width: $width-1-1;
-    margin: $gap-0;
+.com-wrapper {
+    @extend %flex;
+    @extend %flex-model;
+    
+    &.split-screen {
+        padding: $gap-0;
+    }
+    &.default,
+    &.full-screen {
+        @include breakpoints(mobile) {
+            padding: $gap-2 $gap-1;
+        }
+        @include breakpoints(tablet) {
+            padding: $gap-4 $gap-2;
+        }
+        @include breakpoints(notebook) {
+            padding: $gap-6 $gap-3;
+        }
+        @include breakpoints(laptop) {
+            padding: $gap-8 $gap-4;
+        }
+        @include breakpoints(widescreen) {
+            padding: $gap-10 $gap-5;
+        }
+    }
+    &.advanced {
+        @include breakpoints(mobile) {
+            padding: $gap-4 $gap-2;
+        }
+        @include breakpoints(tablet) {
+            padding: $gap-6 $gap-3;
+        }
+        @include breakpoints(notebook) {
+            padding: $gap-8 $gap-4;
+        }
+        @include breakpoints(laptop) {
+            padding: $gap-10 $gap-5;
+        }
+        @include breakpoints(widescreen) {
+            padding: $gap-12 $gap-6;
+        }        
+    }
+
+    .com-container {
+        @extend %flex;
+        @extend %flex-model;
+
+    }
 }

@@ -1,0 +1,102 @@
+@import 'vars';
+
+// Element reset
+
+%reset {
+    width: auto;
+    height: auto;
+    margin: $gap-0;
+    padding: $gap-0;
+    border: none;
+    background: none;
+    outline: none;
+    text-decoration: none;
+}
+
+// Flex Box + Model
+
+%flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;    
+}
+
+%flex-model {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+%flex-vertical {
+    flex-direction: column;
+}
+%flex-horizontal {
+    flex-direction: row;
+}
+
+// Element visibility
+
+%visible {
+    display: block;
+}
+
+%hidden {
+    display: none;
+}
+
+// Element Custom Radius
+
+%radius-all {
+    -webkit-border-radius: $size-1-1;
+    -moz-border-radius: $size-1-1;
+    border-radius: $size-1-1;
+}
+
+%radius-half {
+    -webkit-border-radius: $size-5-10;
+    -moz-border-radius: $size-5-10;
+    border-radius: $size-5-10;
+}
+
+%radius-button {
+    -webkit-border-radius: $gap-6; 
+    -moz-border-radius: $gap-6; 
+    border-radius: $gap-6; 
+}
+
+// Borders
+
+%border-solid {
+    border-style: solid;
+    border-width: 1px;
+}
+
+%border-dashed {
+    border-style: dashed;
+    border-width: 1px;
+}
+
+%border-dotted {
+    border-style: dotted;
+    border-width: 1px;
+}
+
+%border-double {
+    border-style: double;
+    border-width: 1px;
+}
+
+// Custom Font Transformation
+
+%uppercase {
+    text-transform: $upper;
+}
+
+%lower {
+    text-transform: $lower;
+}
+
+%capital {
+    text-transform: $capital;
+}

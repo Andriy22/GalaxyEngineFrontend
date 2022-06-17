@@ -1,0 +1,59 @@
+@import 'vars';
+
+// Lato
+
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato/Lato-ThinItalic.ttf") format('truetype');
+    font-weight: $font-weight-1;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato/Lato-Thin.ttf") format('truetype');
+    font-weight: $font-weight-1;
+}
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato/Lato-LightItalic.ttf") format('truetype');
+    font-weight: $font-weight-3;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato/Lato-Light.ttf") format('truetype');
+    font-weight: $font-weight-3;
+}
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato/Lato-Italic.ttf") format('truetype');
+    font-weight: $font-weight-4;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato/Lato-Regular.ttf") format('truetype');
+    font-weight: $font-weight-4;
+}
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato/Lato-BoldItalic.ttf") format('truetype');
+    font-weight: $font-weight-7;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato/Lato-Bold.ttf") format('truetype');
+    font-weight: $font-weight-7;
+}
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato/Lato-BlackItalic.ttf") format('truetype');
+    font-weight: $font-weight-9;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Lato";
+    src: url("./assets/fonts/Lato/Lato-Black.ttf") format('truetype');
+    font-weight: $font-weight-9;
+}

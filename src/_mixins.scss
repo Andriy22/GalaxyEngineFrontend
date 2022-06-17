@@ -1,0 +1,50 @@
+@import 'vars',
+        'functions';
+
+// Mixin to manage responsive breakpoints
+
+@mixin breakpoints($breakpoint) {
+
+    @if $breakpoint == mobile {
+        @media (min-width: $gap-0) and (max-width: $gap-15) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint == tablet {
+        @media (min-width: $gap-15)  and (max-width: $gap-17) {
+            @content;
+        }
+    }
+    @else if $breakpoint == notebook {
+        @media (min-width: $gap-17) and (max-width: $gap-20) {
+            @content;
+        }
+    }
+    
+    @else if $breakpoint == laptop {
+        @media (min-width: $gap-21) and (max-width: $gap-22) {
+            @content;
+        }
+    }
+    
+    @else if $breakpoint == widescreen {
+        @media (min-width: $gap-23) {
+            @content;
+        }
+    }
+
+  }
+
+// Generates a linear gradient for a given element with a fallback color.
+// .selector { @include x-linear-gradient('to bottom', #ccc, #ddd, #bbb); }
+
+  @mixin x-linear-gradient ($direction: 'to bottom', $fallback: #ccc, $from: #ccc, $to: #aaa) {
+
+	$directions: helper-gradient-angle($direction);
+    
+	background-color: $fallback;
+	background-image: -webkit-gradient(linear, unquote(nth($directions, 2)), from($from), to($to)); // Android 2.1-3.0
+	background-image: -webkit-linear-gradient(unquote(nth($directions, 1)), $from, $to);
+	background-image:         linear-gradient(unquote($direction), $from, $to);
+}  
