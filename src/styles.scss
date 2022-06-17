@@ -1,8 +1,8 @@
 /* Global styles, to run server: ng serve -o */
 
-@import 'vars',
-        'preset',
-        'mixins';
+@import './vars',
+        './preset',
+        './mixins';
 
 html,
 body {
