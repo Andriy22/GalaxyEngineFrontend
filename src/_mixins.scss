@@ -6,29 +6,35 @@
 @mixin breakpoints($breakpoint) {
 
     @if $breakpoint == mobile {
+
         @media (min-width: $gap-0) and (max-width: $gap-15) {
             @content;
         }
     }
 
     @else if $breakpoint == tablet {
+
         @media (min-width: $gap-15)  and (max-width: $gap-17) {
             @content;
         }
     }
+    
     @else if $breakpoint == notebook {
+
         @media (min-width: $gap-17) and (max-width: $gap-20) {
             @content;
         }
     }
     
     @else if $breakpoint == laptop {
+
         @media (min-width: $gap-21) and (max-width: $gap-22) {
             @content;
         }
     }
     
     @else if $breakpoint == widescreen {
+        
         @media (min-width: $gap-22) {
             @content;
         }
@@ -64,5 +70,3 @@
     border: $color $width $style;
 
 }
-
-

@@ -1,0 +1,195 @@
+// Flex Box + Model
+
+%flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;    
+}
+
+%flex-model {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+// Parent Containers
+
+%flex-vertical {
+    flex-direction: column;
+}
+%flex-vertical-invert {
+    flex-direction: column-reverse;
+}
+
+%flex-horizontal {
+    flex-direction: row;
+}
+
+%flex-horizontal-invert {
+    flex-direction: row-reverse;
+}
+
+%flex-wrap {
+    flex-wrap: wrap;
+}
+
+%flex-wrap-invert {
+    flex-wrap: wrap-reverse;
+}
+
+%flex-align-start {
+    align-items: flex-start;
+}
+%flex-align-center {
+    align-items: center;
+}
+%flex-align-stretch {
+    align-items: stretch;
+}
+%flex-align-end {
+    align-items: flex-end;
+}
+
+%flex-justify-start {
+    justify-content: flex-start;
+}
+
+%flex-justify-around {
+    justify-content: space-around;
+}
+
+%flex-justify-between {
+    justify-content: space-between;
+}
+
+%flex-justify-evenly {
+    justify-content: space-evenly;
+}
+
+%flex-justify-center {
+    justify-content: center;
+}
+
+%flex-justify-end {
+    justify-content: flex-end;
+}
+
+%flex-content-start {
+    align-content: flex-start;
+}
+%flex-content-center {
+    align-content: center;
+}
+%flex-content-stretch {
+    align-content: stretch;
+}
+%flex-content-between {
+    align-content: space-between;
+}
+%flex-content-around {
+    align-content: space-around;
+}
+%flex-content-evenly {
+    align-content: space-evenly;
+}
+%flex-content-end {
+    align-content: flex-end;
+}
+
+/* Gap, Row-gap, Column-gap
+
+%flex-gap {
+    gap:;
+}
+%flex-gap-row-col {
+    gap:;
+}
+%flex-gap-row {
+    gap:;
+}
+%flex-gap-column {
+    gap:;
+}
+
+*/
+
+// Child Elements
+
+%flex-self-start {
+    align-self: flex-start;
+}
+%flex-self-stretch {
+    align-self: stretch;
+}
+%flex-self-center {
+    align-self: center;
+}
+%flex-self-base {
+    align-self: baseline;
+}
+%flex-self-end {
+    align-self: flex-end;
+}
+
+%flex-order-1 {
+    order: 1;
+}
+
+%flex-order-2 {
+    order: 2;
+}
+
+%flex-order-3 {
+    order: 3;
+}
+
+%flex-order-4 {
+    order: 3;
+}
+
+%flex-grow-1 {
+    flex-grow: 1;
+}
+
+%flex-grow-2 {
+    flex-grow: 2;
+}
+
+%flex-grow-3 {
+    flex-grow: 3;
+}
+
+%flex-grow-4 {
+    flex-grow: 4;
+}
+
+%flex-shrink-1 {
+    flex-shrink: 1;
+}
+
+%flex-shrink-2 {
+    flex-shrink: 2;
+}
+
+%flex-shrink-3 {
+    flex-shrink: 3;
+}
+
+%flex-shrink-4 {
+    flex-shrink: 4;
+}
+
+// Float
+
+%float-left {
+    float:left
+}
+
+%float-left {
+    float: right;
+}
+
+%float-none {
+    float: none;
+}

@@ -1,0 +1,85 @@
+// <button></button>, input[type='button'], input[type='submit'], input[type='reset']
+
+// input[type='password'], input[type='text'], input[type='email']
+// input[type='search'], input[type='tel']
+
+// input[type='file'], input[type='image'], input[type='hidden']
+
+// input[type='range']
+//min='' max='' step=''
+
+// input[type='number']
+//min='' max='' step=''
+
+// input[type='date']
+// value='' min='' max=''
+
+// input[type='datetime']
+// type='datetime' type='datetime-local'
+
+// input[type='color']
+
+// <textarea></textarea>
+// <select><option></option></select>
+// checkbox + label
+// radio + label
+
+@import './vars',
+        './utility',
+        './helpers',
+        './layout';
+
+input[type="button"],
+.button {
+    @extend %flex;
+    @extend %flex-model;
+    @extend %flex-horizontal;
+    @extend %radius-button;
+
+    font-family: $font;
+    font-weight: $font-weight-4;
+    border: none;
+    
+    &.button-primary {
+        font-size: $gap-4;
+        background: $primary;
+        color: $white;
+    }
+    &.button-default {
+        padding: $gap-2 $gap-4;
+    }
+    &.button-large {
+        font-size: $gap-6;
+        padding: $gap-3 $gap-4;
+    }
+    &.text-center {
+        text-align: center;
+    }
+    &.text-left {
+        text-align: left;
+    }
+    &.text-right {
+        text-align: right;
+    }
+    &.w-icon {
+        gap: $gap-3;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        @extend %bg-8;
+        cursor: pointer;
+    }
+
+    @include breakpoints(mobile) {
+    }
+    @include breakpoints(tablet) {
+    }
+    @include breakpoints(notebook) {
+    }
+    @include breakpoints(laptop) {
+    }
+    @include breakpoints(widescreen) {
+    }
+}

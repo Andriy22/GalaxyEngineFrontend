@@ -1,0 +1,48 @@
+// item_groups
+// element visibility
+// a:hover, a:focus, a:active, a:visited
+// span with text and custom bg
+
+@import './vars',
+        './layout';
+
+// Element reset
+
+%reset {
+    width: auto;
+    height: auto;
+    margin: $gap-0;
+    padding: $gap-0;
+    border: none;
+    background: none;
+    outline: none;
+    text-decoration: none;
+}
+
+// Any
+*,
+*::before,
+*::after {
+    @extend %flex;
+    @extend %flex-model;
+    outline: none;
+    text-decoration: none;
+}
+
+// Visited Links
+
+a,
+a:visited {
+    color: inherit;
+}
+
+// Element visibility
+
+%visible {
+    display: block;
+}
+
+%hidden {
+    display: none;
+}
+

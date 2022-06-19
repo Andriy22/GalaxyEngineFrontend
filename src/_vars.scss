@@ -2,18 +2,17 @@ $base: 16px;
 
 // Color Scheme
 
-$white: #ffffff;
-$black: #111111;
-$grey-1: #f9f9fA;
-$grey-2: #eceef0;
-$grey-3: #dee1e5;
-$grey-4: #98a0ae;
-$grey-5: #626d7d;
-$primary: #4b33ff; 
-$primary-highlight: #0060ff; //#66a0ff;
-$primary-shadow: #001d4d;
-$accent: #be00cc;
-$accent-highlight: #80f0ff;
+$color-0: #ffffff;          // white
+$color-1: #111111;          // black
+$color-2: #f9f9fA;          // additional color
+$color-3: #eceef0;          // additional color
+$color-4: #dee1e5;          // additional color
+$color-5: #98a0ae;          // additional color
+$color-6: #626d7d;          // additional color
+$color-7: #4b33ff;          // primary color
+$color-8: #0060ff;          // highlight color
+$color-9: #001d4d;          // shadow color
+$color-10: #be00cc;         // accent color
 
 // Element & Block gap, also can be used as icon sizes, media query screen size, etc
 
