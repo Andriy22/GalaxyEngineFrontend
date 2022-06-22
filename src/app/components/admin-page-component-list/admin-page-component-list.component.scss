@@ -1,0 +1,39 @@
+@import '/src/vars',
+        '/src/mixins',
+        '/src/helpers',
+        '/src/forms',
+        '/src/layout';
+
+.ui-edit-component-content {
+
+    @extend %flex,
+            %flex-horizontal,
+            %radius-button,
+            %flex-align-center,
+            %flex-justify-between;
+
+    width: $size-1-1;
+    background: $color-0;
+
+    @include breakpoints(mobile) {
+        padding: $gap-2;
+        gap: $gap-2;
+    }
+    @include breakpoints(tablet) {
+        padding: $gap-4;
+        gap: $gap-4;
+    }
+    @include breakpoints(notebook) {
+        padding: $gap-6;
+        gap: $gap-6;
+    }
+    @include breakpoints(laptop) {
+        padding: $gap-8;
+        gap: $gap-6;
+    }
+    @include breakpoints(widescreen) {
+        padding: $gap-4;
+        gap: $gap-6;
+    }
+
+}        

@@ -1,10 +1,5 @@
-// item_groups
-// element visibility
-// a:hover, a:focus, a:active, a:visited
-// span with text and custom bg
-
-@import './vars',
-        './layout';
+@import '/src/vars',
+        '/src/layout';
 
 // Element reset
 
@@ -19,23 +14,6 @@
     text-decoration: none;
 }
 
-// Any
-*,
-*::before,
-*::after {
-    @extend %flex;
-    @extend %flex-model;
-    outline: none;
-    text-decoration: none;
-}
-
-// Visited Links
-
-a,
-a:visited {
-    color: inherit;
-}
-
 // Element visibility
 
 %visible {
@@ -44,5 +22,239 @@ a:visited {
 
 %hidden {
     display: none;
+}
+
+// Background
+
+%bg-0 {
+    background: $color-0;
+}
+
+%bg-1 {
+    background: $color-1;
+}
+%bg-2 {
+    background: $color-2;
+}
+
+%bg-3 {
+    background: $color-3;
+}
+
+%bg-4 {
+    background: $color-4;
+}
+
+%bg-5 {
+    background: $color-5;
+}
+
+%bg-6 {
+    background: $color-6;
+}
+
+%bg-7 {
+    background: $color-7;
+}
+
+%bg-8 {
+    background: $color-8;
+}
+
+%bg-9 {
+    background: $color-9;
+}
+
+%bg-10 {
+    background: $color-10;
+}
+
+// Text colors
+
+%text-0 {
+    color: $color-0;
+}
+
+%text-1 {
+    color: $color-1;
+}
+%text-2 {
+    color: $color-2;
+}
+
+%text-3 {
+    color: $color-3;
+}
+
+%text-4 {
+    color: $color-4;
+}
+
+%text-5 {
+    color: $color-5;
+}
+
+%text-6 {
+    color: $color-6;
+}
+
+%text-7 {
+    color: $color-7;
+}
+
+%text-8 {
+    color: $color-8;
+}
+
+%text-9 {
+    color: $color-9;
+}
+
+%text-10 {
+    color: $color-10;
+}
+
+// Font Weight
+
+%font-weight-1 {
+    font-weight: $font-weight-1;
+}
+
+%font-weight-2 {
+    font-weight: $font-weight-2;
+}
+
+%font-weight-3 {
+    font-weight: $font-weight-3;
+}
+
+%font-weight-4 {
+    font-weight: $font-weight-4;
+}
+
+%font-weight-5 {
+    font-weight: $font-weight-5;
+}
+
+%font-weight-6 {
+    font-weight: $font-weight-6;
+}
+
+%font-weight-7 {
+    font-weight: $font-weight-7;
+}
+
+%font-weight-8 {
+    font-weight: $font-weight-8;
+}
+
+%font-weight-9 {
+    font-weight: $font-weight-9;
+}
+
+// Font Variant
+
+%font-default {
+    font-variant: $font-default;
+}
+
+%font-smallcaps {
+    font-variant: $font-smallcaps;
+}
+
+// Text Transform
+
+%font-upper {
+    text-transform: $font-upper;
+}
+
+%font-lower {
+    text-transform: $font-lower;
+}
+
+%font-capital {
+    text-transform: $font-capital
+}
+
+// Headings h1, h2, h3, h4, h5, h6
+
+#{$header-group} {
+    @extend %flex,
+            %flex-model;
+
+    width: $size-1-1;
+    margin: $gap-0;
+
+    &.color-default {
+        @extend %text-7;
+    }
+
+    &.color-inactive {
+        @extend %text-4;
+    }
+
+    &.color-accent {
+        @extend %text-10;
+    }
+
+    &.thin { @extend %font-weight-1; }
+    &.extra-light { @extend %font-weight-2; }
+    &.light { @extend %font-weight-3; }
+    &.normal { @extend %font-weight-4; }
+    &.medium { @extend %font-weight-5; }
+    &.semi-bold { @extend %font-weight-6; }
+    &.bold { @extend %font-weight-7; }
+    &.extra-bold { @extend %font-weight-8; }
+    &.black { @extend %font-weight-9; }
+}
+
+h1 {
+    font-size: $gap-12;
+    line-height: $gap-12 + $gap-2;
+    letter-spacing: $gap-1 / 20;
+}
+
+// Block and/or element positioning
+
+%relative {
+    position: relative;
+}
+
+%absolute {
+    position: absolute;
+}
+
+// Element Custom Radius
+
+%radius-all {
+    -webkit-border-radius: $size-1-1;
+    -moz-border-radius: $size-1-1;
+    border-radius: $size-1-1;
+}
+
+%radius-half {
+    -webkit-border-radius: $size-5-10;
+    -moz-border-radius: $size-5-10;
+    border-radius: $size-5-10;
+}
+
+%radius-button {
+    -webkit-border-radius: $gap-2; 
+    -moz-border-radius: $gap-2; 
+    border-radius: $gap-2; 
+}
+
+// SVG solid icons
+
+svg {
+
+    @extend %radius-button,
+            %bg-3;
+
+    &.ui-list-icon {
+        width: $gap-6;
+        height: $gap-6;
+    }
+
 }
 

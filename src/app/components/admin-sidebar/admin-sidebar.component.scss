@@ -1,0 +1,100 @@
+@import '/src/vars',
+        '/src/mixins',
+        '/src/helpers',
+        '/src/layout';
+
+
+
+.ui-logged-user {
+
+    @extend %flex,
+            %flex-horizontal,
+            %flex-justify-between;
+    
+    background: $color-1; 
+
+
+    @include breakpoints(mobile) {
+        padding: $gap-2;
+    }
+    @include breakpoints(tablet) {
+        padding: $gap-3;
+    }
+    @include breakpoints(notebook) {
+        padding: $gap-4;
+    }
+    @include breakpoints(laptop) {
+        padding: $gap-4;
+    }
+    @include breakpoints(widescreen) {
+        padding: $gap-5;
+    }
+
+    .ui-username {
+        font-size: $gap-4;
+        font-weight: $font-weight-4;
+        color: $color-0;
+    }
+
+    svg.ui-logout {
+
+    }
+
+}
+
+.ui-group-list-title {
+
+    @extend %font-weight-7,
+            %font-upper;
+
+    color: $color-4;
+
+    @include breakpoints(mobile) {
+        padding: $gap-2;
+    }
+    @include breakpoints(tablet) {
+        padding: $gap-3;
+    }
+    @include breakpoints(notebook) {
+        padding: $gap-4;
+    }
+    @include breakpoints(laptop) {
+        padding: $gap-4;
+    }
+    @include breakpoints(widescreen) {
+        padding: $gap-5;
+    }        
+
+}
+
+.ui-group-list-item {
+
+    @extend %flex,
+            %flex-horizontal;
+
+
+    @include breakpoints(mobile) {
+        padding: $gap-2;
+    }
+    @include breakpoints(tablet) {
+        padding: $gap-3;
+    }
+    @include breakpoints(notebook) {
+        padding: $gap-4;
+    }
+    @include breakpoints(laptop) {
+        padding: $gap-4;
+    }
+    @include breakpoints(widescreen) {
+        padding: $gap-5;
+        gap: $gap-5;
+    }         
+
+    &.ui-current {
+
+        @extend %bg-2,
+                %radius-button;
+    }
+
+
+}

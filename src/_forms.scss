@@ -24,17 +24,16 @@
 // checkbox + label
 // radio + label
 
-@import './vars',
-        './utility',
-        './helpers',
-        './layout';
+@import '/src/vars',
+        '/src/helpers',
+        '/src/layout';
 
 input[type="button"],
 .button {
-    @extend %flex;
-    @extend %flex-model;
-    @extend %flex-horizontal;
-    @extend %radius-button;
+    @extend %flex,
+            %flex-model,
+            %flex-horizontal,
+            %radius-button;
 
     font-family: $font;
     font-weight: $font-weight-4;
@@ -69,6 +68,7 @@ input[type="button"],
     &:active,
     &:focus {
         @extend %bg-8;
+        
         cursor: pointer;
     }
 
@@ -83,3 +83,4 @@ input[type="button"],
     @include breakpoints(widescreen) {
     }
 }
+

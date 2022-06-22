@@ -1,4 +1,86 @@
-// local compontent styles
+@import '/src/vars',
+        '/src/mixins',
+        '/src/helpers',
+        '/src/layout';
 
-@import './src/vars',
-'./src/mixins';
+.ui-wrapper {
+
+    @extend %flex,
+            %flex-horizontal,
+            %flex-model;
+
+    width: $size-1-1;
+    background: $color-2;         
+    
+
+    @include breakpoints(mobile) {
+        flex-direction: row;
+    }
+    @include breakpoints(tablet) {
+        flex-direction: row;
+    }
+    @include breakpoints(notebook) {
+        flex-direction: row;
+    }
+    @include breakpoints(laptop) {
+        flex-direction: row;
+    }
+    @include breakpoints(widescreen) {
+        flex-direction: row;
+        padding: $gap-12;
+    }
+
+}
+
+.ui-container {
+        
+    @extend %flex,
+            %flex-vertical,
+            %flex-self-stretch;
+
+    width: $size-1-1;                
+
+    @include breakpoints(mobile) {
+        flex-direction: column;
+    }
+    @include breakpoints(tablet) {
+        flex-direction: column;
+    }
+    @include breakpoints(notebook) {
+        flex-direction: column;
+    }
+    @include breakpoints(laptop) {
+        flex-direction: row;
+    }
+    @include breakpoints(widescreen) {
+        flex-direction: row;
+        // padding: $gap-12;
+    }
+
+}
+
+.ui-admin-sidebar {
+
+    @extend %flex,
+            %flex-vertical,
+            %flex-self-stretch;
+
+    padding: $gap-0;
+    
+    @include breakpoints(mobile) {
+        width: $size-4-10;
+    }
+    @include breakpoints(tablet) {
+        width: $size-4-10;
+    }
+    @include breakpoints(notebook) {
+        width: $size-4-10;
+    }
+    @include breakpoints(laptop) {
+        width: $size-3-10;
+    }
+    @include breakpoints(widescreen) {
+        width: $size-2-10;
+    }
+    
+}

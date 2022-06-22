@@ -45,7 +45,7 @@
 // Generates a linear gradient for a given element with a fallback color.
 // .selector { @include x-linear-gradient('to bottom', #ccc, #ddd, #bbb); }
 
-  @mixin x-linear-gradient ($direction: 'to bottom', $fallback: #ccc, $from: #ccc, $to: #aaa) {
+@mixin x-linear-gradient ($direction: 'to bottom', $fallback: #ccc, $from: #ccc, $to: #aaa) {
 
 	$directions: helper-gradient-angle($direction);
     
@@ -54,7 +54,6 @@
 	background-image: -webkit-linear-gradient(unquote(nth($directions, 1)), $from, $to);
 	background-image:         linear-gradient(unquote($direction), $from, $to);
 }  
-
 
 // Borders
 // $style: solid, dashed, dotted, double, dot-dash, inset, groove, outset, wave, dot-dot-dash
@@ -65,6 +64,7 @@
     border-#{$border}: $color $width $style;
 
 }
+
 @mixin default-border($color, $width, $style) {
 
     border: $color $width $style;
